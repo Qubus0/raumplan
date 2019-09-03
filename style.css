@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.room {
+	transition-duration: 0.2s;
+}
+
+td, tr {
+	padding: 2px;
+	border: solid 1px;
+}
+
+th {
+	padding: 5px;
+}
+
+.slidecontainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+input[type="button"] {
+	-webkit-appearance: none;
+	outline: none;
+	background: #ddf5e9;
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	cursor: pointer;
+	border: none;
+}
+
+input[type="button"]:hover {
+	box-shadow: 0px 0px 10px gray;
+}
+
+#nowB, #playB {
+	padding: 10px;
+	margin: 5px;
+}
+
+.slider {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 15px;
+	background: #ddf5e9;
+	outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #b40000;
+	outline: none;
+	cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+	box-shadow: 0px 0px 10px gray;
+}
+
+#label {
+	width: 160px;
+	text-align: center;
+	font-family: "Oswald", sans-serif;
+	color: 000000;
+	font-size: 30px;
+}
+
+.radiodiv {
+	width: 150px;
+	padding: 10px;
+}
+
+input[type="radio"]{
+	-webkit-appearance: none;
+	appearance: none;
+	background: #b40000;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin: 5px;
+	cursor: pointer;
+	vertical-align: -6px;
+}
+
+input[type="radio"]:hover {
+	box-shadow: 0px 0px 10px gray;
+}
+
+input[type="radio"]:checked, input[type="radio"]:focus {
+	background: white;
+	width: 18px;
+	height: 18px;
+	margin: 2px;
+	border: solid 3px;
+	border-color: #00b45a;
+	outline: none;
+}
+
+.radTxt {
+	font-family: "Lato", sans-serif;
+	cursor: pointer;
+}
+
+#stundenplan {
+	display: none;
+}
+
+.svgImage {
+	width: 100%;
+	height: 100%;
+	margin: 5px;
+	padding: 10px;
+	background: #ddf5e9;
+}
+
+.svgbg {
+	fill: #00b45a;
+	fill-opacity: 0.9;
+	opacity: 1;
+	transform-origin: 50% 50%;
+}
+
+path:hover {
+	stroke-width: 25px;
+}
