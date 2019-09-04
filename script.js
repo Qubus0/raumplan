@@ -90,8 +90,8 @@ function updateT() {
 		"4/1/20",
 		"4/1/19",
 		"4/1/15",
-		"4/1/25"
-	];
+		"4/1/25"];
+	highlAll();
 
 	function highlAll() {
 		for (var i = 0; i < roomNums.length; i++) {
@@ -99,7 +99,6 @@ function updateT() {
 		}
 	}
 
-	highlAll();
 
 	fach = hours - 8;
 
@@ -152,15 +151,17 @@ var nowB = document.getElementById("nowB");
 nowB.onclick = function() {
 	currentTime();
 	updateT();
-	highlAll();
 };
 
 function currentTime() {
 	var hrs = date.getHours();
 	var mins = date.getMinutes();
+	var day = date.getDay();
+	radios[day-1].checked = true;
 	slider.value = hrs * 60 + mins;
 	updateT();
 }
+
 
 
 var playB = document.getElementById("playB");
