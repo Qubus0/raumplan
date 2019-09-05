@@ -3,19 +3,30 @@ var slider = document.getElementById("timeRange");
 var label = document.getElementById("label");
 var play = document.getElementById("playButton");
 var radios = document.getElementsByName("days");
-var fillColor = "#b40000";
+var playB = document.getElementById("playB");
+var table = document.getElementById("stundenplan");
+var tableB = document.getElementById("toggleTable");
+var sp = document.getElementById("stundenplan").style;
+var nowB = document.getElementById("nowB");
 
+var fillColor = "#b40000";
+var animating = false;
 var date = new Date();
 
 var fach = 0;
 var found = 0;
 
 // table coloring stuff
-var table = document.getElementById("stundenplan");
+
 
 updateT();
 
+slider.onmousedown = function() {
+	updateT();
+}
+
 slider.oninput = function() {
+	animating = false;
 	updateT();
 };
 
@@ -125,9 +136,7 @@ function updateT() {
 }
 //time label stuff end
 
-var tableB = document.getElementById("toggleTable");
 
-var sp = document.getElementById("stundenplan").style;
 
 
 if (sp.display == "none") {
@@ -146,7 +155,7 @@ tableB.onclick = function() {
 	}
 };
 
-var nowB = document.getElementById("nowB");
+
 
 nowB.onclick = function() {
 	currentTime();
@@ -162,10 +171,6 @@ function currentTime() {
 	updateT();
 }
 
-
-
-var playB = document.getElementById("playB");
-var animating;
 
 playB.onclick = function(){
   animating = !animating;

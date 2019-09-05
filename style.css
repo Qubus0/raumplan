@@ -2,10 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-.room {
-	transition-duration: 0.2s;
-}
-
 td, tr {
 	padding: 2px;
 	border: solid 1px;
@@ -125,6 +121,14 @@ input[type="radio"]:checked, input[type="radio"]:focus {
 	fill-opacity: 0.9;
 	opacity: 1;
 	transform-origin: 50% 50%;
+}
+
+.room {
+	transition-duration: 0.2s;
+}
+
+path {
+	fill: rgba(0,0,0,0.01);
 }
 
 path:hover {
