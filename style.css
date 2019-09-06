@@ -55,9 +55,22 @@ input[type="button"]:hover {
 	background: #b40000;
 	outline: none;
 	cursor: pointer;
+	transition-duration: 1s;
+}
+.slider::-webkit-slider-thumb:hover {
+	box-shadow: 0px 0px 10px gray;
 }
 
-.slider::-webkit-slider-thumb:hover {
+.slider::-moz-range-thumb {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #b40000;
+	border: none;
+	cursor: pointer;
+	transition-duration: 1s;
+}
+.slider::-moz-range-thumb:hover {
 	box-shadow: 0px 0px 10px gray;
 }
 
