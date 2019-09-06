@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap'); ##font-family: 'Overpass Mono', monospace;
 
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); ##fo nt-family: "Lato", sans-serif;
+##@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); ##fo nt-family: "Oswald", sans-serif;
 
 td, tr {
 	padding: 2px;
@@ -60,16 +61,17 @@ input[type="button"]:hover {
 	box-shadow: 0px 0px 10px gray;
 }
 
-#label {
-	width: 160px;
+#timeLabel {
+	width: 250px;
 	text-align: center;
-	font-family: "Oswald", sans-serif;
+	font-family: "Overpass Mono", monospace;
 	color: 000000;
 	font-size: 30px;
+	margin: 5px;
 }
 
 .radiodiv {
-	width: 150px;
+	width: 180px;
 	padding: 10px;
 }
 

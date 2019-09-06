@@ -1,13 +1,12 @@
 //timer Label stuff
 var slider = document.getElementById("timeRange");
-var label = document.getElementById("label");
-var play = document.getElementById("playButton");
+var label = document.getElementById("timeLabel");
 var radios = document.getElementsByName("days");
-var playB = document.getElementById("playB");
 var table = document.getElementById("stundenplan");
-var tableB = document.getElementById("toggleTable");
-var sp = document.getElementById("stundenplan").style;
+var sp = table.style;
 var nowB = document.getElementById("nowB");
+var playB = document.getElementById("playB");
+var tableB = document.getElementById("toggleTable");
 
 var fillColor = "#b40000";
 var animating = false;
@@ -21,7 +20,7 @@ var found = 0;
 
 updateT();
 
-slider.onmousedown = function() {
+slider.onclick = function() {
 	updateT();
 }
 
@@ -158,6 +157,7 @@ tableB.onclick = function() {
 
 
 nowB.onclick = function() {
+	animating = false;
 	currentTime();
 	updateT();
 };
@@ -169,6 +169,29 @@ function currentTime() {
 	radios[day-1].checked = true;
 	slider.value = hrs * 60 + mins;
 	updateT();
+}
+
+function newDay(previous) {
+	var wasChecked = 0;
+	for(var i=0; i<radios.length; i++) {
+		if(radios[i].checked) {
+			wasChecked = i;
+		radios[i].checked = false;
+		}
+	}
+	if(previous == "prev") {
+	    var nextDay = wasChecked-1;
+   		if(nextDay < 0) {
+			nextDay = radios.length-1;
+		};
+	} else {
+    	var nextDay = wasChecked+1;
+	    if(nextDay > radios.length-1) {
+			nextDay = 0;
+		};
+	}
+	
+    radios[nextDay].checked = true;
 }
 
 
@@ -184,22 +207,33 @@ function animate(){
   var max = parseInt(slider.max);	
 	
   if(value < max){
-    slider.value = (value+1);
+    slider.value = value + 1;
   } else {
-    var wasChecked = 0;
-		for(var i=0; i<radios.length; i++) {
-			if(radios[i].checked) {
-				wasChecked = i;
-			radios[i].checked = false;
-			}
-		}
-    var newDay = wasChecked+1;
-    if(newDay > radios.length-1) {
-			newDay = 0
-		};
-    radios[newDay].checked = true;
+    newDay();
     slider.value = min;
   }
   updateT();
   setTimeout(animate,5);
 }
+
+document.onkeydown = function(e) {
+  	var value = parseInt(slider.value);
+    switch (e.keyCode) {
+        case 37: //left
+        	slider.value = value - 60;
+            break;
+        case 39: //right
+			slider.value = value + 60;
+            break;    
+        case 38: //up
+        	e.preventDefault();
+        	newDay("prev");
+            break;
+        case 40: //down
+        	e.preventDefault();
+        	newDay();
+            break;
+    }
+    updateT();
+    highlAll();
+};
