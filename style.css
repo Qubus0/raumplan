@@ -8,6 +8,10 @@
 	align-items: center;
 }
 
+.slidecontainer * {
+	transition-duration: 0.2s;
+}
+
 input[type="button"] {
 	-webkit-appearance: none;
 	outline: none;
@@ -20,6 +24,7 @@ input[type="button"] {
 
 input[type="button"]:hover {
 	box-shadow: 0px 0px 10px gray;
+	transition-duration: 0.2s;
 }
 
 #nowB, #playB {
@@ -129,6 +134,10 @@ th {
 	background: #ddf5e9;
 }
 
+.svgImage * {
+	transition-duration: 0.3s;
+}
+
 .svgTxt {
 	font-size: 30px;
 	font-family: "Overpass Mono", monospace;
@@ -145,7 +154,6 @@ th {
 .svgbg:hover {
 	stroke: black;
 	stroke-width: 10px;
-	transition-duration: 0.2s;
 }
 
 .room {
