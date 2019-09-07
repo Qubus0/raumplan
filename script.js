@@ -77,7 +77,6 @@ function updateT() {
 		"3/2/24",
 		"3/2/23",
 		"3/2/22",
-		/*"3/2/25",*/ 
 		"3/2/26",
 		"3/2/27",
 		"3/3/1",
@@ -100,7 +99,12 @@ function updateT() {
 		"4/1/20",
 		"4/1/19",
 		"4/1/15",
-		"4/1/25"];
+		"4/1/25",
+		"4/0/1",
+		"4/0/2",
+		"4/0/3", 
+		"6/0/14",
+		"6/0/15"];
 	highlAll();
 
 	function highlAll() {
@@ -153,8 +157,6 @@ tableB.onclick = function() {
 		this.value = "Raumplan anzeigen";
 	}
 };
-
-
 
 nowB.onclick = function() {
 	animating = false;
@@ -235,5 +237,4 @@ document.onkeydown = function(e) {
             break;
     }
     updateT();
-    highlAll();
 };

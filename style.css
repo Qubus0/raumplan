@@ -1,16 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap'); ##font-family: 'Overpass Mono', monospace;
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); ##fo nt-family: "Lato", sans-serif;
-##@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); ##fo nt-family: "Oswald", sans-serif;
-
-td, tr {
-	padding: 2px;
-	border: solid 1px;
-}
-
-th {
-	padding: 5px;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .slidecontainer {
 	width: 100%;
@@ -55,7 +45,7 @@ input[type="button"]:hover {
 	background: #b40000;
 	outline: none;
 	cursor: pointer;
-	transition-duration: 1s;
+	transition-duration: 0.2s;
 }
 .slider::-webkit-slider-thumb:hover {
 	box-shadow: 0px 0px 10px gray;
@@ -68,7 +58,7 @@ input[type="button"]:hover {
 	background: #b40000;
 	border: none;
 	cursor: pointer;
-	transition-duration: 1s;
+	transition-duration: 0.2s;
 }
 .slider::-moz-range-thumb:hover {
 	box-shadow: 0px 0px 10px gray;
@@ -123,12 +113,27 @@ input[type="radio"]:checked, input[type="radio"]:focus {
 	display: none;
 }
 
+td {
+	border: solid 1px;
+}
+
+th {
+	padding: 5px;
+}
+
 .svgImage {
 	width: 100%;
 	height: 100%;
 	margin: 5px;
 	padding: 10px;
 	background: #ddf5e9;
+}
+
+.svgTxt {
+	y: 30;
+	font-size: 30;
+	font-family: "Lato", sans-serif;
+	fill: #00b45a;
 }
 
 .svgbg {
@@ -138,8 +143,18 @@ input[type="radio"]:checked, input[type="radio"]:focus {
 	transform-origin: 50% 50%;
 }
 
+.svgbg:hover {
+	stroke: black;
+	stroke-width: 10px;
+	transition-duration: 0.2s;
+}
+
 .room {
 	transition-duration: 0.2s;
+}
+
+#spOutline {
+	fill: black;
 }
 
 path {
