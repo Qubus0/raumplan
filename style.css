@@ -130,9 +130,8 @@ th {
 }
 
 .svgTxt {
-	y: 30;
-	font-size: 30;
-	font-family: "Lato", sans-serif;
+	font-size: 30px;
+	font-family: "Overpass Mono", monospace;
 	fill: #00b45a;
 }
 
@@ -151,10 +150,6 @@ th {
 
 .room {
 	transition-duration: 0.2s;
-}
-
-#spOutline {
-	fill: black;
 }
 
 path {
