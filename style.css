@@ -126,7 +126,9 @@ input[type="radio"]:checked, input[type="radio"]:focus {
 }
 
 .tableizer-table {
+	width: 100%;
 	display: none;
+	overflow: scroll;
 }
 
 td {
@@ -185,14 +187,3 @@ path:hover {
 	}
 }
 
-/*@media only screen and (max-width: 700px) {
-	.svgcontainer {
-		display: block;
-		align-items: center;
-	}
-	
-	.svgImage {
-		width: 100%;
-		margin: auto;
-	}
-}*/
