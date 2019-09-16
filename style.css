@@ -187,3 +187,41 @@ path:hover {
 	}
 }
 
+@media only screen and (max-width: 500px) {
+	.slidecontainer {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: 25% 15% 15% auto ;
+		margin-bottom: 20px;
+	}
+
+	#timeLabel {
+		grid-row: 1;
+		grid-column: 1;
+		margin: 10px;
+	}
+
+	.slider {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		grid-column: 1 / span 4;
+		order: 4;
+	}
+
+	#playB {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	#nowB {
+		grid-row: 1;
+		grid-column: 3;
+	}
+
+	.radiodiv {
+		grid-row: 1;
+		grid-column: 4;	
+		justify-self: end;
+	}
+}
+
