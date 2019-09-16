@@ -2,7 +2,7 @@
 var slider = document.getElementById("timeRange");
 var label = document.getElementById("timeLabel");
 var radios = document.getElementsByName("days");
-var table = document.getElementById("stundenplan");
+var table = document.getElementsByClassName("tableizer-table")[0];
 var sp = table.style;
 var nowB = document.getElementById("nowB");
 var playB = document.getElementById("playB");
@@ -34,13 +34,13 @@ function updateT() {
 	var minutes = slider.value % 60;
 
 	if (hours < 10 && minutes < 10) {
-		label.innerHTML = "0" + hours + ":0" + minutes + " Uhr";
+		label.innerHTML = "0" + hours + ":0" + minutes;
 	} else if (hours < 10) {
-		label.innerHTML = "0" + hours + ":" + minutes + " Uhr";
+		label.innerHTML = "0" + hours + ":" + minutes;
 	} else if (minutes < 10) {
-		label.innerHTML = hours + ":0" + minutes + " Uhr";
+		label.innerHTML = hours + ":0" + minutes;
 	} else {
-		label.innerHTML = hours + ":" + minutes + " Uhr";
+		label.innerHTML = hours + ":" + minutes;
 	}
 
 	for (var i = 0; i < radios.length; i++) {
@@ -222,9 +222,11 @@ document.onkeydown = function(e) {
   	var value = parseInt(slider.value);
     switch (e.keyCode) {
         case 37: //left
+        	e.preventDefault();
         	slider.value = value - 60;
             break;
         case 39: //right
+        	e.preventDefault();
 			slider.value = value + 60;
             break;    
         case 38: //up

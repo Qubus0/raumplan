@@ -2,8 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+
+body > * {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.svgcontainer {
+	display: flex;
+}
+
 .slidecontainer {
-	width: 100%;
 	display: flex;
 	align-items: center;
 }
@@ -70,7 +79,6 @@ input[type="button"]:hover {
 }
 
 #timeLabel {
-	width: 250px;
 	text-align: center;
 	font-family: "Overpass Mono", monospace;
 	color: 000000;
@@ -79,8 +87,11 @@ input[type="button"]:hover {
 }
 
 .radiodiv {
-	width: 180px;
 	padding: 10px;
+}
+
+.dontWrap {
+	white-space: nowrap;
 }
 
 input[type="radio"]{
@@ -114,7 +125,7 @@ input[type="radio"]:checked, input[type="radio"]:focus {
 	cursor: pointer;
 }
 
-#stundenplan {
+.tableizer-table {
 	display: none;
 }
 
@@ -167,3 +178,21 @@ path {
 path:hover {
 	stroke-width: 25px;
 }
+
+@media only screen and (max-width: 1100px) {
+	body > * {
+		width: 100%;
+	}
+}
+
+/*@media only screen and (max-width: 700px) {
+	.svgcontainer {
+		display: block;
+		align-items: center;
+	}
+	
+	.svgImage {
+		width: 100%;
+		margin: auto;
+	}
+}*/
