@@ -42,6 +42,11 @@ slider.oninput = function() {
 };
 
 function updateT() {
+	if(animating) {
+		document.getElementById("playIcon").style.fill = "black";
+	} else {
+		document.getElementById("playIcon").style.fill = "none";
+	}
 	var hours = Math.floor(slider.value / 60);
 	var minutes = slider.value % 60;
 
@@ -157,6 +162,7 @@ function newDay(previous) {
 playB.onclick = function(){
   animating = !animating;
   animate();
+  document.getElementById("playIcon").style.fill="none";
 }
 
 function animate(){

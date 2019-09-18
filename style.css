@@ -30,7 +30,11 @@
 	transition-duration: 0.2s;
 }
 
-input[type="button"] {
+button {
+	border: none;
+}
+
+input[type="button"], button {
 	-webkit-appearance: none;
 	outline: none;
 	background: #ddf5e9;
@@ -40,7 +44,7 @@ input[type="button"] {
 	border: none;
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover, button:hover {
 	box-shadow: 0px 0px 10px gray;
 	transition-duration: 0.2s;
 }
@@ -48,6 +52,16 @@ input[type="button"]:hover {
 #nowB, #playB {
 	padding: 10px;
 	margin: 5px;
+	height: 50px;
+}
+
+#playB {
+	width: 50px;
+}
+
+#playB svg {
+	width: 25px;
+	height: 25px;
 }
 
 .slider {
@@ -182,13 +196,14 @@ th {
 	transition-duration: 0.2s;
 }
 
+.room:hover {
+	stroke-width: 25px;
+}
+
 path {
 	fill: rgba(0,0,0,0.01);
 }
 
-path:hover {
-	stroke-width: 25px;
-}
 
 @media only screen and (max-width: 1100px) {
 	body > * {
