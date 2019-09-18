@@ -8,6 +8,8 @@ var nowB = document.getElementById("nowB");
 var playB = document.getElementById("playB");
 var tableB = document.getElementById("toggleTable");
 
+var identificationRow = 1;
+
 var fillColor = "#b40000";
 var animating = false;
 var date = new Date();
@@ -117,7 +119,7 @@ function updateT() {
 	fach = hours - 8;
 
 	function highlightRoom(room) {
-		for (var i = 0, col; (col = table.rows[1].cells[i]); i++) {
+		for (var i = 0, col; (col = table.rows[identificationRow].cells[i]); i++) {
 			if (col.innerHTML.toLowerCase() == room) {
 				for (var j = 0; j <= 13; j++) {
 					table.rows[3 + day + j].cells[i].style.background = "none";

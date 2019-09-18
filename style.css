@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+	
 
-
-body > * {
-	width: 1100px;
+.ratiocontainer {
 	margin: 0 auto;
 }
 
@@ -12,8 +11,18 @@ body > * {
 	display: flex;
 }
 
+.pusher {
+	min-height: calc(100vh - 140px);
+}
+
 .slidecontainer {
 	display: flex;
+	position: -webkit-sticky;
+	position: sticky;
+	height: 120px;
+	margin-top: 5px;
+	bottom: 0;
+	background: rgba(221, 245, 233, 0.4);
 	align-items: center;
 }
 
@@ -187,12 +196,17 @@ path:hover {
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
+
+	.pusher {
+		min-height: calc(100vh - 190px);
+	}
+
 	.slidecontainer {
 		display: grid;
 		grid-template-rows: auto auto;
 		grid-template-columns: 25% 15% 15% auto ;
-		margin-bottom: 20px;
+		height: 170px;
 	}
 
 	#timeLabel {
@@ -202,8 +216,8 @@ path:hover {
 	}
 
 	.slider {
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin: 5px auto 20px auto;
+		width: 90%;
 		grid-column: 1 / span 4;
 		order: 4;
 	}

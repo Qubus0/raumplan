@@ -10,9 +10,9 @@
 	</head>
 
 	<body>
-
-		<!-- GRUNDRISSE -->
-		<!-- UNTERGESCHOSS -->
+		<div class="pusher">
+			<!-- GRUNDRISSE -->
+			<!-- UNTERGESCHOSS -->
 		<div class="svgcontainer">
 			<svg class="svgImage"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" viewBox="0 0 8000 3800"> 
 				
@@ -261,9 +261,9 @@
 
 		<!-- /GRUNDRISSE -->
 
-
-
-
+		
+			<input type="button" id="toggleTable">
+		</div>
 		<div class="slidecontainer">
 			<p id="timeLabel"></p>
 			
@@ -271,7 +271,7 @@
 			
 			<input type="button" value=" ► " id="playB"/>
 			
-			<input type="button" value="Now" id="nowB"/>
+			<input type="button" value="Jetzt" id="nowB"/>
 			
 			<div class="radiodiv">
 				<label class="dontWrap"> <input type="radio" name="days" value="0" onchange="updateT()" checked> <span class="radTxt"> Montag </span></label>
@@ -283,12 +283,10 @@
 				<label class="dontWrap"> <input type="radio" name="days" value="3" onchange="updateT()"> <span class="radTxt"> Donnerstag </span></label>
 				<br>
 				<label class="dontWrap"> <input type="radio" name="days" value="4" onchange="updateT()"> <span class="radTxt"> Freitag </span></label>
-			</div>
-			
-		</div>
-		<div>
-			<input type="button" id="toggleTable">
-		</div>
+			</div>	
+		</div>	
+		
+
 
 
 		<!-- TABLE -->
