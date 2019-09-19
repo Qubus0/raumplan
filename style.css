@@ -271,7 +271,7 @@ path {
 	}
 }
 
-@media only screen and (min-resolution: 401dpi) and (max-width: 1080px) {
+@media only screen and (min-resolution: 380dpi) and (max-width: 1000px) {
 
 	.svgcontainer {
 		display: block;
