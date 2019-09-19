@@ -202,7 +202,7 @@ path {
 }
 
 
-@media only screen and (max-width: 700px) and (max-height: 700px) {
+@media only screen and (max-width: 700px) {
 
 	.svgcontainer {
 		display: block;
