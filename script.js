@@ -1,5 +1,7 @@
 //timer Label stuff
 var slider = document.getElementById("timeRange");
+	var min = parseInt(slider.min);
+	var max = parseInt(slider.max);
 var label = document.getElementById("timeLabel");
 var radios = document.getElementsByName("days");
 var table = document.getElementsByClassName("tableizer-table")[0];
@@ -160,25 +162,23 @@ function newDay(previous) {
 
 
 playB.onclick = function(){
-  animating = !animating;
-  animate();
-  document.getElementById("playIcon").style.fill="none";
+	animating = !animating;
+	animate();
+	document.getElementById("playIcon").style.fill="none";
 }
 
 function animate(){
-  if(!animating){return;}
-  var value = parseInt(slider.value);
-  var min = parseInt(slider.min);
-  var max = parseInt(slider.max);	
-	
-  if(value < max){
-    slider.value = value + 1;
-  } else {
-    newDay();
-    slider.value = min;
-  }
-  updateT();
-  setTimeout(animate,5);
+	var value = parseInt(slider.value);
+	if(!animating){return;}
+
+	if(value < max){
+	slider.value = value + 1;
+	} else {
+	newDay();
+	slider.value = min;
+	}
+	updateT();
+	setTimeout(animate,5);
 }
 
 document.onkeydown = function(pressedKey) {
@@ -186,19 +186,33 @@ document.onkeydown = function(pressedKey) {
     switch (pressedKey.keyCode) {
         case 37: //left
         	pressedKey.preventDefault();
-        	slider.value = value - 60;
+        	if(slider.value <= 9*60-1) {
+        		newDay("prev");
+        		slider.value = max;
+        	} else {
+        		slider.value = value - 60;
+        	}
+        	animating = false;
             break;
         case 39: //right
         	pressedKey.preventDefault();
-			slider.value = value + 60;
+			if(slider.value >= 20*60-1) {
+        		newDay();
+        		slider.value = min;
+        	} else {
+        		slider.value = value + 60;
+        	}
+			animating = false;
             break;    
         case 38: //up
         	pressedKey.preventDefault();
         	newDay("prev");
+        	animating = false;
             break;
         case 40: //down
         	pressedKey.preventDefault();
         	newDay();
+        	animating = false;
             break;
     }
     updateT();

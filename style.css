@@ -205,29 +205,35 @@ path {
 }
 
 
-@media only screen and (max-width: 1100px) {
-	body > * {
-		width: 100%;
-	}
-}
+@media only screen and (max-width: 1080px) {
 
-@media only screen and (max-width: 650px) {
+	.svgcontainer {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.svgImage {
+		width: 95%;
+		height: 95%;
+		//margin: 5px 5px auto auto;
+	}
 
 	.pusher {
-		min-height: calc(100vh - 190px);
+		min-height: calc(100vh - 210px);
 	}
 
 	.slidecontainer {
 		display: grid;
 		grid-template-rows: auto auto;
-		grid-template-columns: 25% 15% 15% auto ;
-		height: 170px;
+		grid-template-columns: auto 15% 15% auto ;
+		height: 190px;
 	}
 
 	#timeLabel {
 		grid-row: 1;
 		grid-column: 1;
 		margin: 10px;
+		font-size: 40px;
 	}
 
 	.slider {
@@ -237,9 +243,15 @@ path {
 		order: 4;
 	}
 
+	input[type="button"], button {
+		height: 70px;
+		font-size: 20px;
+	}
+
 	#playB {
 		grid-row: 1;
 		grid-column: 2;
+		width: 70px;
 	}
 
 	#nowB {
@@ -251,6 +263,7 @@ path {
 		grid-row: 1;
 		grid-column: 4;	
 		justify-self: end;
+		font-size: 20px;
 	}
 }
 
