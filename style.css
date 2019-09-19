@@ -202,7 +202,76 @@ path {
 }
 
 
-@media only screen and (max-width: 700px) and (max-height: 700px) {
+@media only screen and (max-width: 700px) {
+
+	.svgcontainer {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.svgImage {
+		width: 95%;
+		height: 95%;
+		//margin: 5px 5px auto auto;
+	}
+
+	.pusher {
+		min-height: calc(100vh - 25vmax);
+	}
+
+	.slidecontainer {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: auto 30% auto;
+		height: 25vmax;
+	}
+
+	#timeLabel {
+		grid-row: 1;
+		grid-column: 1;
+		margin: 10px;
+		font-size: 40px;
+		font-size: 6vmax;
+	}
+
+	.slider {
+		margin: 5px auto 20px auto;
+		width: 90%;
+		grid-column: 1 / span 3;
+		order: 4;
+	}
+
+	input[type="button"], button {
+		font-size: 20px;
+		font-size: 3vmax;	
+	}
+
+	#playB {
+		grid-row: 1;
+		grid-column: 2;
+		justify-self: left;
+	}
+
+	#nowB {
+		grid-row: 1;
+		grid-column: 2;
+		justify-self: end;	
+	}
+
+	#tableB {
+		height: auto;
+	}
+
+	.radiodiv {
+		grid-row: 1 / span 2;
+		grid-column: 4;	
+		justify-self: end;
+		font-size: 20px;
+		font-size: 3vmax;
+	}
+}
+
+@media only screen and (min-resolution: 401dpi) and (max-width: 1080px) {
 
 	.svgcontainer {
 		display: block;
