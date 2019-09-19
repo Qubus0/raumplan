@@ -39,6 +39,7 @@ input[type="button"], button {
 	outline: none;
 	background: #ddf5e9;
 	font-size: 15px;
+	font-size: 1.5vw;
 	font-family: "Lato", sans-serif;
 	cursor: pointer;
 	border: none;
@@ -106,6 +107,7 @@ input[type="button"]:hover, button:hover {
 	font-family: "Overpass Mono", monospace;
 	color: 000000;
 	font-size: 30px;
+	font-size: 3vw;
 	margin: 5px;
 }
 
@@ -234,6 +236,7 @@ path {
 		grid-column: 1;
 		margin: 10px;
 		font-size: 40px;
+		font-size: 6vw;
 	}
 
 	.slider {
@@ -246,6 +249,7 @@ path {
 	input[type="button"], button {
 		height: 70px;
 		font-size: 20px;
+		font-size: 3vw;	
 	}
 
 	#playB {
@@ -264,6 +268,7 @@ path {
 		grid-column: 4;	
 		justify-self: end;
 		font-size: 20px;
+		font-size: 3vw;
 	}
 }
 
