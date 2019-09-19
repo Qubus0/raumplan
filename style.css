@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-	
-
-.ratiocontainer {
-	margin: 0 auto;
-}
 
 .svgcontainer {
 	display: flex;
@@ -39,7 +34,7 @@ input[type="button"], button {
 	outline: none;
 	background: #ddf5e9;
 	font-size: 15px;
-	font-size: 1.5vw;
+	font-size: 1.5vmax;
 	font-family: "Lato", sans-serif;
 	cursor: pointer;
 	border: none;
@@ -107,7 +102,7 @@ input[type="button"]:hover, button:hover {
 	font-family: "Overpass Mono", monospace;
 	color: 000000;
 	font-size: 30px;
-	font-size: 3vw;
+	font-size: 3vmax;
 	margin: 5px;
 }
 
@@ -207,7 +202,7 @@ path {
 }
 
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 700px) and (max-height: 700px) {
 
 	.svgcontainer {
 		display: block;
@@ -221,14 +216,14 @@ path {
 	}
 
 	.pusher {
-		min-height: calc(100vh - 210px);
+		min-height: calc(100vh - 25vmax);
 	}
 
 	.slidecontainer {
 		display: grid;
 		grid-template-rows: auto auto;
-		grid-template-columns: auto 15% 15% auto ;
-		height: 190px;
+		grid-template-columns: auto 30% auto;
+		height: 25vmax;
 	}
 
 	#timeLabel {
@@ -236,39 +231,43 @@ path {
 		grid-column: 1;
 		margin: 10px;
 		font-size: 40px;
-		font-size: 6vw;
+		font-size: 6vmax;
 	}
 
 	.slider {
 		margin: 5px auto 20px auto;
 		width: 90%;
-		grid-column: 1 / span 4;
+		grid-column: 1 / span 3;
 		order: 4;
 	}
 
 	input[type="button"], button {
-		height: 70px;
 		font-size: 20px;
-		font-size: 3vw;	
+		font-size: 3vmax;	
 	}
 
 	#playB {
 		grid-row: 1;
 		grid-column: 2;
-		width: 70px;
+		justify-self: left;
 	}
 
 	#nowB {
 		grid-row: 1;
-		grid-column: 3;
+		grid-column: 2;
+		justify-self: end;	
+	}
+
+	#tableB {
+		height: auto;
 	}
 
 	.radiodiv {
-		grid-row: 1;
+		grid-row: 1 / span 2;
 		grid-column: 4;	
 		justify-self: end;
 		font-size: 20px;
-		font-size: 3vw;
+		font-size: 3vmax;
 	}
 }
 
