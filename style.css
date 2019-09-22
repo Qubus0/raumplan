@@ -201,10 +201,75 @@ path {
 	fill: rgba(0,0,0,0.01);
 }
 
+/* Big Screen */
+/*@media only screen and (min-device-width: 1920px) {
+// CSS
+}*/
 
-@media only screen and (max-width: 200px) {
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-	.svgcontainer {
+/*@media (min-width: 1281px) {
+  
+  //CSS
+  
+}*/
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+/*@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  //CSS
+  
+}*/
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/*@media (min-width: 768px) and (max-width: 1024px) {
+  
+  //CSS
+  
+}*/
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/*@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}*/
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+/*@media (min-width: 481px) and (max-width: 767px) {
+  
+  //CSS
+  
+}
+*/
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .svgcontainer {
 		display: block;
 		margin: 0 auto;
 	}
@@ -268,6 +333,5 @@ path {
 		justify-self: end;
 		font-size: 20px;
 		font-size: 3vmax;
-	}
+  
 }
-
