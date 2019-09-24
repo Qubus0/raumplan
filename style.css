@@ -276,17 +276,18 @@ path {
 screen and (min-device-width: 320px) and (max-device-width: 479px) {
   	.svgcontainer {
 		display: block;
-		margin: 0 auto;
 	}
 
 	.svgImage {
-		width: 95%;
+		display: block;
 		height: 95%;
-		//margin: 5px 5px auto auto;
+		width: 95%;
+		margin: 5px auto;
 	}
 
 	.pusher {
 		min-height: calc(100vh - var(--slidecontainerheight));
 	}
+
 
 }
