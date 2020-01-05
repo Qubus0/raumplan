@@ -9,6 +9,7 @@ var sp = table.style;
 var nowB = document.getElementById("nowB");
 var playB = document.getElementById("playB");
 var tableB = document.getElementById("tableB");
+var paths = document.getElementsByTagName("path");
 
 var identificationRow = 1;
 var linesPerDayOfWeek = 14;
@@ -159,6 +160,14 @@ function newDay(previous) {
 	
     radios[nextDay].checked = true;
 }
+
+// for(var i = 0; i < paths.length; i++) (
+// 	function(i) {
+// 		paths[i].onclick = function() {
+// 			alert(paths[i].childNodes[1].innerHTML);
+// 		}
+// 	}
+// )(i);
 
 
 playB.onclick = function(){
